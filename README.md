@@ -16,3 +16,7 @@ git config --globla user.email
 | 김철수 |  30  |  100 |  70  |  70  |
 
 [SEULBINLIM](http://github.com/seulbinnim) Github 계정
+
+[SEULBINLIM](http://github.com/seulbinnim) Github 계정
+
+[SEULBINLIM](http://github.com/seulbinnim) Github 계정
