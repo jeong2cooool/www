@@ -1,6 +1,8 @@
 # FUS(Fastcampus UI/UX school)
 ## GIT 학습하기
 ### 초기 환경설정
+####정민이
+#####UX/UI
 ```
 git config --global user.name
 "사용자 이름"
