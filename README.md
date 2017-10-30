@@ -17,6 +17,4 @@ git config --globla user.email
 
 [SEULBINLIM](http://github.com/seulbinnim) Github 계정
 
-[SEULBINLIM](http://github.com/seulbinnim) Github 계정
-
-[SEULBINLIM](http://github.com/seulbinnim) Github 계정
+```
