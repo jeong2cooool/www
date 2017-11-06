@@ -17,7 +17,7 @@ table {
   border-spacing: 0;
 }
 
-/* 숨김 콘텐츠 */
+/* 숨김 콘텐츠 왜 숨겼어요?*/
 
 legend, .search-form label {
   background: lime;
@@ -40,10 +40,10 @@ a:hover, a:focus {
   color: #f00;
 }
 
-/* 반응형 콘텐츠 */
+/*  되게 중요함 . 이 로고 이미지의 최대 가로사이즈 70%까지만 커짐. 세로는 가로사이즈의 자동 넓이를 반응형 콘텐츠 */
 
 .responsive {
-  max-width: 100%;
+  max-width: 70%;
   height: auto;
 }
 
