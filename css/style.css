@@ -125,18 +125,76 @@ body {
     width: 100%;
     height: 100%;
   }
-  .navigation {
-    background-color: rgba(0, 0, 0, 0.7);
-    position: fixed;
+  .menubar-container {
+    position: absolute;
+    top: 6rem;
+    right: 2rem;
+    width: 30px;
+    height: 30px;
+    overflow: hidden;
+  }
+  .btn-menubar {
+    background: transparent;
+    position: absolute;
     top: 0;
     left: 0;
-    width: 70%;
-    height: 100vh;
-    color: #fff;
+    z-index: 10;
+    border: 0;
+    padding: 30px 0 0 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    outline-offset: -2px;
+  }
+  .menubar {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background-color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all .2s;
+  }
+  .menubar-top {
+    top: 0;
+  }
+  .menubar-act .menubar-top {
+    transform: rotate(45deg);
+    top: 50%;
+    margin: -3px;
+  }
+  .menubar-middle {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .menubar-act .menubar-middle {
+    transform: translate(-100%, -50%);
+  }
+  .menubar-bottom {
+    bottom: 0;
+  }
+  .menubar-act .menubar-bottom {
+    transform: rotate(-45deg);
+    top: 50%;
+    margin: -3px;
+  }
+  .menu-act {
+    transform: translateX(0) !important;
   }
   .main-menu {
-    margin: 2rem;
+    transition: all .2s;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
     list-style: none;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100vh;
+    color: #fff;
+    padding: 2rem 5rem;
+    transform: translateX(-100%);
   }
   .main-menu span {
     font-size: 1.8rem;
@@ -231,5 +289,8 @@ body {
     display: block;
     padding: 5px 0;
     margin-top: 5px;
+  }
+  .menubar-container {
+    display: none;
   }
 }
