@@ -1,4 +1,4 @@
-  @charset "utf-8";
+    @charset "utf-8";
   @import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css");
   @import url("fonts.css");
   /* 스타일 초기화 */
@@ -97,17 +97,17 @@
   }
   /* 고해상도 디스플레이 */
   /* @media screen and (device-aspect-ratio: 16/9) and (min-resolution:192dpi) {
-    .main-section-heading {
-      background-image: url ("images/sprite_main_x2");
-      background-size: 50% 50%;
-    }
-  } */
+.main-section-heading {
+background-image: url ("images/sprite_main_x2");
+background-size: 50% 50%;
+}
+} */
   /* @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and ( min--moz-device-pixel-ratio: 2), only screen and ( -o-min-device-pixel-ratio: 2/1), only screen and ( min-device-pixel-ratio: 2), only screen and ( min-resolution: 192dpi), only screen and ( min-resolution: 2dppx) {
-    .main-section-heading {
-      background-image: url("images/sprite_main_x2.png");
-      background-size: 50% 50%;
-    }
-  } */
+.main-section-heading {
+background-image: url("images/sprite_main_x2.png");
+background-size: 50% 50%;
+}
+} */
   /* 추천서적 */
   
   .recommend-book {
@@ -139,7 +139,6 @@
   
   .news-media {
     text-align: center;
-    background: pink;
   }
   .news-summary {
     line-height: 1.5;
@@ -154,14 +153,12 @@
     position: relative;
   }
   .board-list {
-    background: yellow;
     list-style: none;
   }
   .board-list li {
     margin: 5px;
   }
   .board-list a {
-    background: pink;
     display: inline-block;
     width: calc(100% - 80px);
     white-space: nowrap;
@@ -169,16 +166,86 @@
     text-overflow: ellipsis;
   }
   .board-list time {
-    background: aqua;
     float: right;
   }
   .board-more {
-    background: aqua;
     position: absolute;
     top: 2rem;
     right: 0;
   }
+  /* 인기사이트 */
+  
+  .favorite-site-list {
+    overflow: hidden;
+    margin-left: 50px
+  }
+  .favorite-site-list li {
+    counter-increment: number;
+    margin: 10px 0;
+  }
+  .favorite-site-list li::before {
+    content: counter(number, decimal);
+    color: #fff;
+    text-align: center;
+    font-size: 1.2rem;
+    background: #f00;
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    margin-right: 5px;
+  }
   /* 트위터 */
+  /*   
+.twitter-user {
+  display: inline-block;
+}
+.twitter-profile {
+  background: #f00;
+  position: relative;
+  float: right;
+  border-image-outset: 50%
+}
+.twitter-content {
+  display: inline;
+  position: relative;
+}
+.twitter-date {
+  display: block;
+  text-align: right;
+} */
+  
+  .twitter {}
+  .twitter-user {
+    display: block;
+  }
+  .twitter-profile {
+    width: 20%;
+    float: right;
+    margin-top: -2rem;
+    margin-left: 1.5rem;
+  }
+  .twitter-profile img {
+    border: 1px solid #aaa;
+  }
+  .twitter-content {}
+  .twitter-date {
+    display: block;
+    text-align: right;
+    clear: both;
+  }
+  .footer {
+    background: #988574;
+    color: #fff;
+    padding: 2rem;
+  }
+  .copyright {
+    margin-top: 1em;
+  }
+  /* 
+푸터 */
+  
+  .
   /* Mobile */
   
   @media screen and (max-width:999px) {
@@ -329,91 +396,195 @@
       border-bottom: 1px solid #aaa;
       padding-bottom: 2rem;
     }
-  }
-  /* Desktop */
-  
-  @media screen and (min-width:1000px) {
-    .header {
-      width: 80%;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: 204px 1fr;
-      grid-template-rows: 45px 55px;
-      grid-template-areas: "logo    member" "logo    search";
-    }
-    .logo {
-      grid-area: logo;
-      line-height: 100px;
-    }
-    .logo a {
-      display: block;
-    }
-    .logo img {
-      vertical-align: middle;
-    }
-    .member, .search-wrap {
-      display: flex;
-      flex-direction: row;
-      justify-content: flex-end;
-      align-items: center;
-    }
-    .member {
-      grid-area: member;
-      list-style: none;
-    }
-    .member li {
-      margin-left: 1em;
-    }
-    .search-form {
-      grid-area: search;
-    }
-    .search-wrap {
-      padding: 10px 0 0 0;
-    }
-    .search {
-      border: 1px solid #aaa;
-      border-radius: 5px;
-      padding: 5px 10px;
-      width: 50%;
-    }
-    .btn-search {
-      background: #988574;
-      border-radius: 5px;
+    .slogan-heading {
       border: 0;
-      padding: 5px 10px;
-      margin-left: 1em;
-      color: #fff;
+      clip: rect(0 0 0 0);
+      clip: rect(0 0 0 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1px;
     }
-    .navigation {
-      background-color: #988574;
-      border-top: 2px solid #000;
-      border-bottom: 2px solid #000;
-      padding: 1.5rem 1rem;
-    }
-    .main-menu {
-      width: 80%;
-      margin: 0 auto;
-      display: grid;
-      list-style: none;
-      display: flex;
-      justify-content: space-between;
-      color: #fff;
-      font-size: 1.5rem
-    }
-    .main-menu span {
-      text-shadow: 1px 1px 0 #000, 2px 2px 0 #000;
-    }
-    .sub-menu {
-      list-style: none;
-      font-size: 1.6rem;
-      margin: 1rem;
-    }
-    .sub-menu a {
+    address span {
       display: block;
-      padding: 5px 0;
-      margin-top: 5px;
     }
-    .menubar-container {
-      display: none;
-    }
+    /* Desktop */
+    @media screen and (min-width:1000px) {
+      .header, .main-menu, .main, .slogan {
+        width: 80%;
+        margin: 0 auto;
+      }
+      .logo {
+        grid-area: logo;
+        line-height: 100px;
+      }
+      .logo a {
+        display: block;
+      }
+      .logo img {
+        vertical-align: middle;
+      }
+      .member, .search-wrap {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+      }
+      .member {
+        grid-area: member;
+        list-style: none;
+      }
+      .member li {
+        margin-left: 1em;
+      }
+      .search-form {
+        grid-area: search;
+      }
+      .search-wrap {
+        padding: 10px 0 0 0;
+      }
+      .search {
+        border: 1px solid #aaa;
+        border-radius: 5px;
+        padding: 5px 10px;
+        width: 50%;
+      }
+      .btn-search {
+        background: #988574;
+        border-radius: 5px;
+        border: 0;
+        padding: 5px 10px;
+        margin-left: 1em;
+        color: #fff;
+      }
+      .navigation {
+        background-color: #988574;
+        border-top: 2px solid #000;
+        border-bottom: 2px solid #000;
+        padding: 1.5rem 1rem;
+      }
+      .main-menu {
+        width: 80%;
+        margin: 0 auto;
+        display: grid;
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        color: #fff;
+        font-size: 1.5rem
+      }
+      .main-menu span {
+        text-shadow: 1px 1px 0 #000, 2px 2px 0 #000;
+      }
+      .sub-menu {
+        list-style: none;
+        font-size: 1.6rem;
+        margin: 1rem;
+      }
+      .sub-menu a {
+        display: block;
+        padding: 5px 0;
+        margin-top: 5px;
+      }
+      .menubar-container {
+        display: none;
+      }
+      /* .main {
+    background: silver;
   }
+  .main::after {
+    content: "null";
+    display: block;
+    background: #f00;
+    clear: both;
+  }
+  .recommend-book {
+    background: red;
+    float: left;
+    width: 30%
+  }
+  .news {
+    background: orange;
+    float: left;
+    width: 70%
+  }
+  .board {
+    background: yellow;
+    float: left;
+    width: 30%;
+  }
+  .favorite-site {
+    background: green;
+    float: right;
+    width: 45%;
+    float: right;
+  }
+  .twitter {
+    background: blue;
+    float: left;
+    width: 25%;
+  } */
+      .main {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .recommend-book {
+        width: 30%
+      }
+      .news {
+        width: 70%;
+        box-sizing: border-box;
+      }
+      .board {
+        width: 30%
+      }
+      .favorite-site {
+        width: 25%;
+        order: 1;
+      }
+      .twitter {
+        width: 45%;
+        box-sizing: border-box;
+        padding-left: 2rem;
+      }
+      /* .slogan {
+      background: yellow;
+      display: flex;
+      width: 80%
+    }
+    .cafe {
+      background: red;
+      float: left;
+      width: 20%
+          }
+        } */
+      .slogan {
+        padding: 20px 20px 20px 20px;
+        position: relative;
+      }
+      .slogan-heading {
+        width: 90px;
+        height: 93px;
+        text-align: center;
+        line-height: 90px;
+        position: relative;
+        bottom: -25;
+      }
+      .slogan-heading::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100px;
+        height: 100%;
+        background: url("../images/cafe.png") no-repeat 0 0 /100%;
+      }
+      .slogan-content q {
+        display: block;
+      }
+      .footer {
+        align-content: center;
+      }
+    }
